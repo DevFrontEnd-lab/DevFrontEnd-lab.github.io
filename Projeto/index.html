@@ -50,7 +50,7 @@
 
             <!-- Left Column: Text Content -->
             <div style="flex-basis: 48%; text-align: left;">
-                <h3 style="font-size: 2em; color: #34495e; margin-bottom: 20px; font-weight: 500;">
+                <h3 style="font-size: 2.5em; color: #2c3e50; margin-bottom: 30px; text-align: center; font-weight: 600;">
                     Nossa Missão
                 </h3>
                 <p style="font-size: 1.1em; color: #7f8c8d; line-height: 1.6;">
@@ -60,7 +60,7 @@
 
             <!-- Right Column: Service Highlights -->
             <div style="flex-basis: 48%; text-align: left;">
-                <h3 style="font-size: 2em; color: #34495e; margin-bottom: 20px; font-weight: 500;">
+                <h3 style="font-size: 2.5em; color: #2c3e50; margin-bottom: 30px; text-align: center; font-weight: 600;">
                     O Que Oferecemos
                 </h3>
                 <ul style="font-size: 1.1em; color: #7f8c8d; list-style-type: none; padding-left: 0;">
@@ -106,12 +106,44 @@
                 <input id="input_phone" type="tel" name="phone" placeholder="Qual o tipo do seu veículo?" required
                     style="width: 100%; padding: 15px; font-size: 1em; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9; box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); transition: all 0.3s ease;">
             </div>
+        <div class="select">
+            <div id="category-select">
+                <label for="options-view-button">Categoria</label>
+                <input type="checkbox" id="options-view-button">
+
+                <div id="select-button">
+                    <div id="selected-value">Selecione a categoria</div>
+
+                    <div id="chevrons">
+                        <i data-lucide="chevron-down"></i>
+                        <i data-lucide="chevron-up"></i>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <ul id="options">
+                <li class="option">
+                    <input type="radio"
+                    name="category"
+                    value="bakery"
+                    data-label="Padaria">
+
+                    <i data-lucide="sandwich"></i>
+                    <span class="label">Padaria</span>
+                    <i data-lucide="check"></i>
+                </li>
+
+                
+            </ul>
+        </div>
             <button type="submit" value="Enviar" id="enviar"
             style="background-color: #2c3e50; color: white; padding: 15px; font-size: 1.2em; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;">
             Enviar
         </button>
         <div id="terms-use">
-            <input type="checkbox" id="terms-checkbox" name="terms" value="accepted">
+            <input type="checkbox" id="terms-checkbox" name="termos" value="aceito">
             <label for="terms-checkbox">
                 Eu concordo com os termos e condições e com a política de privacidade de acordo com a LGPD (Lei Geral de Proteção de Dados).
             </label>
@@ -141,6 +173,12 @@
 </footer>
 
     <script src="./email_validation.js"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
 
 </body>
 </html>

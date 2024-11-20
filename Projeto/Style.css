@@ -235,6 +235,74 @@ height: 100%;
 border: 0;
 }
 
+.select{
+    padding: 6rem;
+}
+
+#category-select{
+    letter-spacing: 0.0225rem;
+}
+
+#select-button{
+    margin-top: 5rem;
+    display: flex;
+    padding: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .375rem;
+    border: 1px solid #252529;
+}
+
+#selected-value{
+    letter-spacing: 0.02625rem;
+}
+
+#chevrons svg{
+    width: 1rem;
+    height: 1rem;
+}
+
+#chevrons{
+    color: #afa8b6
+}
+
+#chevrons [data-lucide="chevron-up"]{
+    display: none;
+}
+
+#options-view-button:focus + #select-button,
+#options-view-button:checked + #selected-button{
+    outline: 1px solid #a881e6;
+}
+
+#category-select:has(#options-view-button:checked)label,
+#options-view-button:checked + #select-button #chevrons{
+    color: #a881e6;
+}
+
+#otions-view-button:checked + #select-button #chevrons[data-lucide="chevron-down"]{
+    display: none;
+}
+
+#options-view-button:checked + #select-button #chevons[data-lucide="chevron-up"]{
+    display:block;
+}
+
+#category-sleect{
+    position: relative;
+}
+
+#options-view-button{
+    all:unset;
+
+    position: absolute;
+    inset: 0;
+
+    cursor: pointer;
+    z-index:3;
+
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     header h1 {

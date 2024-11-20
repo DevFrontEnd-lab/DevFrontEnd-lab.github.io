@@ -80,7 +80,7 @@ input_phone.addEventListener("input", () => {
 
     // Adiciona os cinco dígitos do início do número (após o DDD)
     if (limparPhone.length >= 7) {
-        numero_formatado += `${limparPhone.slice(2, 7)}-`;
+     numero_formatado += `${limparPhone.slice(2, 7)}-`;
     } else if (limparPhone.length > 2) {
         numero_formatado += limparPhone.slice(2, limparPhone.length);
     }
